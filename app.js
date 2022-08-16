@@ -1,6 +1,11 @@
 /**
  *  Your code ⬇️
  */
+
+function checkForSubstring(src, toFind){
+  return (src.includes(toFind));
+}
+
 // iteration 1
 const express = require('express');
 const app = express();
@@ -13,22 +18,16 @@ app.get('/', (request, response) => {
   response.send('Hello!');
 });
 
+
 // iteration 2 + bonus
 app.get('/characters', (request, response) => {
   let result = [... characters];
-  const name = request.query.name;
-  const film = request.query.film;
+  const { name, film } = request.query;
 
-  if (film) {
-    result = result.filter(character => character.films.some(movie => {
-      return (movie.includes(film));
-    }));
-  }
-  if (name) {
-    result = result.filter(character => {
-      return (character.name.includes(name));
-    });
-  }
+  if (film)
+    result = result.filter(character => character.films.some(elem => checkForSubstring(elem, film)));
+  if (name)
+    result = result.filter(character => checkForSubstring(character.name, name));
   response.json(result);
 });
 
