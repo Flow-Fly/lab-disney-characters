@@ -1,0 +1,11 @@
+# ignore emacs files
+*\~
+\#*
+.\#*
+*\#
+
+# ignore json files
+*.json
+
+# igone node files
+node_modules/
