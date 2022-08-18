@@ -1,0 +1,24 @@
+{
+  "name": "lab-disney-characters",
+  "version": "1.0.0",
+  "description": "![Disney search](https://i.giphy.com/media/JUh0yTz4h931K/giphy.webp)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walid21/lab-disney-characters.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/walid21/lab-disney-characters/issues"
+  },
+  "homepage": "https://github.com/walid21/lab-disney-characters#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
